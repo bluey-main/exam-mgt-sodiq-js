@@ -4,7 +4,6 @@ import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./Login";
 import Register from "./Register";
-import Example from "./Example";
 import { AuthProvider } from "./AuthProvider";
 import Dashboard from "./Dashboard";
 import PrivateRoute from "./PrivateRoute";
@@ -28,11 +27,11 @@ function App() {
          pauseOnHover
          theme="light"/>
           <Routes>
-            <Route path="/" element={<Example />} />
+            
             {/* <Route path="/dashboard" element={<Dashboard />} /> */}
             <Route path="/timetable" element={<Timetable />} />
             <Route element={<PrivateRoute />}>
-              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/" element={<Dashboard />} />
             </Route>
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Register />} />

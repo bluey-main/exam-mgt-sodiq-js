@@ -30,7 +30,8 @@ export const AuthProvider = ({ children }) => {
         localStorage.setItem("user", email);
         localStorage.setItem('accessToken', response.data.access_token);
 
-        navigate("/dashboard");
+        navigate("/");
+
       }
 
       console.log( response.data);
@@ -64,7 +65,7 @@ export const AuthProvider = ({ children }) => {
         localStorage.setItem("user", email);
         localStorage.setItem('accessToken', response.data.access_token);
 
-        navigate("/dashboard");
+        navigate("/");
       }
 
       console.log(response.config, response.status);
