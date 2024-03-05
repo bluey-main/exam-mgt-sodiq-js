@@ -237,7 +237,7 @@ const Timetable = () => {
             <td>1pm-3pm</td>
           </tr>
 
-          {/* Example: Dynamic generation of rows */}
+          {/* Example: Dynamc generation of rows */}
           <tr>
             <td rowSpan={5}>Computer Technology</td>
           </tr>
