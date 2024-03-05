@@ -106,7 +106,7 @@ const MainCompt = () => {
   // const [time, setTime] = useState("");
   // const [period, setPeriod] = useState("");
   const [active, setActive] = useState(false);
-  const [deptClass, setDeptClass] = useState("Nd1");
+  const [deptClass, setDeptClass] = useState("ND1");
   const [deptClassCourses, setDeptClassCourses] = useState(courseListNd1);
   const [activeClassIndex, setActiveClassIndex] = useState(0);
   // const [activePeriodIndex, setActivePeriodIndex] = useState(0);
