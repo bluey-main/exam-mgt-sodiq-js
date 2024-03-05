@@ -96,6 +96,7 @@ export default function Dashboard() {
             Exam<span className="text-orange-5">Mgt</span>{" "}
           </h1>
         </div>
+        {(localStorage.getItem('role') != 'student') ?
         <div className="w-full h-[60%] bg-brown-5">
           {depts.map((dept, index) => {
             return (
@@ -125,7 +126,8 @@ export default function Dashboard() {
             );
           })}
         </div>
-
+        : ""
+}
         <div className="w-full h-[30%] bg-green-4 flex flex-col gap-y-9 justify-center items-center">
           <Button onClick={() => {
             setVisibleComponent(<Timetable />) 
@@ -146,7 +148,8 @@ export default function Dashboard() {
       <div className="w-[80%] h-full bg-blue-gray-50">
         <div className="w-full h-[10%] bg-pink-4 flex px-10">
           <div className="w-1/2 h-full bg-purple- flex items-center justify-between">
-            <h1 className="text-3xl font-bold text-green-600">{componentName}</h1>
+          {(localStorage.getItem('role') != 'student') ?
+            <h1 className="text-3xl font-bold text-green-600">{componentName}</h1> : ""}
             {(componentName == "Timetable") ? <Button onClick={() => navigate('/timetable')}>View Full</Button> : ""}
           </div>
           <div className="w-1/2 h-full bg-purple flex justify-end">
@@ -162,10 +165,11 @@ export default function Dashboard() {
             </div>
           </div>
         </div>
-
+        {(localStorage.getItem('role') != 'student') ?
         <div className="w-full h-[90%] bg-orange- overflow-y-auto">
+
           {visibleComponent}
-        </div>
+        </div>: <div className="w-full h-[90%] bg-orange- overflow-y-auto"><Timetable/></div> }
       </div>
     </div>
   );

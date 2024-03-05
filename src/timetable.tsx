@@ -60,12 +60,12 @@ const Timetable = () => {
         ];
 
         // Example: Generate the classes dynamically based on the response
-        const computerTechClasses = ["Nd1", "ND2", "HND1", "HND2"];
-        const foodTechClasses = ["Nd1", "ND2", "HND1", "HND2"];
-        const nutTechClasses = ["Nd1", "ND2", "HND1", "HND2"];
-        const hospClasses = ["Nd1", "ND2", "HND1", "HND2"];
-        const textileClasses = ["Nd1", "ND2", "HND1", "HND2"];
-        const polymerClasses = ["Nd1", "ND2"];
+        const computerTechClasses = ["ND1", "ND2", "HND1", "HND2"];
+        const foodTechClasses = ["ND1", "ND2", "HND1", "HND2"];
+        const nutTechClasses = ["ND1", "ND2", "HND1", "HND2"];
+        const hospClasses = ["ND1", "ND2", "HND1", "HND2"];
+        const textileClasses = ["ND1", "ND2", "HND1", "HND2"];
+        const polymerClasses = ["ND1", "ND2"];
 
         const generatedComputerTechCourses = {};
         const generatedFoodTechCourses = {};
@@ -241,7 +241,7 @@ const Timetable = () => {
           <tr>
             <td rowSpan={5}>Computer Technology</td>
           </tr>
-          {["HND1", "HND2", "ND2", "Nd1"].map((studentClass) => (
+          {["HND1", "HND2", "ND2", "ND1"].map((studentClass) => (
             <tr key={studentClass}>
               <td>{studentClass}</td>
               {[
@@ -271,7 +271,7 @@ const Timetable = () => {
           <tr>
             <td rowSpan={5}>Food Technology</td>
           </tr>
-          {["HND1", "HND2", "ND2", "Nd1"].map((studentClass) => (
+          {["HND1", "HND2", "ND2", "ND1"].map((studentClass) => (
             <tr key={studentClass}>
               <td>{studentClass}</td>
               {[
@@ -301,7 +301,7 @@ const Timetable = () => {
           <tr>
             <td rowSpan={5}>Nutrition And Dietics</td>
           </tr>
-          {["HND1", "HND2", "ND2", "Nd1"].map((studentClass) => (
+          {["HND1", "HND2", "ND2", "ND1"].map((studentClass) => (
             <tr key={studentClass}>
               <td>{studentClass}</td>
               {[
@@ -331,7 +331,7 @@ const Timetable = () => {
           <tr>
             <td rowSpan={5}>Hospitality Management</td>
           </tr>
-          {["HND1", "HND2", "ND2", "Nd1"].map((studentClass) => (
+          {["HND1", "HND2", "ND2", "ND1"].map((studentClass) => (
             <tr key={studentClass}>
               <td>{studentClass}</td>
               {[
@@ -361,7 +361,7 @@ const Timetable = () => {
           <tr>
             <td rowSpan={5}>Textile Technology</td>
           </tr>
-          {["HND1", "HND2", "ND2", "Nd1"].map((studentClass) => (
+          {["HND1", "HND2", "ND2", "ND1"].map((studentClass) => (
             <tr key={studentClass}>
               <td>{studentClass}</td>
               {[
@@ -391,7 +391,7 @@ const Timetable = () => {
           <tr>
             <td rowSpan={5}>Polymer Technology</td>
           </tr>
-          {["ND2", "Nd1"].map((studentClass) => (
+          {["ND2", "ND1"].map((studentClass) => (
             <tr key={studentClass}>
               <td>{studentClass}</td>
               {[

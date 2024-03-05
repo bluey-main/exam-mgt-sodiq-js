@@ -8,6 +8,7 @@ const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(localStorage.getItem("user") || "");
+  // const [role, setRole] = useState(localStorage.getItem("role") || "")
   const navigate = useNavigate();
 
   const login = async (email, password) => {
@@ -27,6 +28,7 @@ export const AuthProvider = ({ children }) => {
   
       if (response.data) {
         setUser(response.data.username);
+        localStorage.setItem("role", response.data.role);
         localStorage.setItem("user", email);
         localStorage.setItem('accessToken', response.data.access_token);
 
@@ -56,6 +58,7 @@ export const AuthProvider = ({ children }) => {
         }, 
         {
           withCredentials:true
+          
         }
       );
       
@@ -63,12 +66,13 @@ export const AuthProvider = ({ children }) => {
       if (response.data) {
         setUser(response.data.username);
         localStorage.setItem("user", email);
+        localStorage.setItem("role", role)
         localStorage.setItem('accessToken', response.data.access_token);
 
         navigate("/");
       }
 
-      console.log(response.config, response.status);
+      console.log(response.data, response.status);
       toast.success("Registered Successfully");
 
 
@@ -81,6 +85,7 @@ export const AuthProvider = ({ children }) => {
   const logout = () => {
     setUser(null);
     localStorage.removeItem("user");
+    localStorage.removeItem("role");
     localStorage.removeItem("accessToken");
 
     navigate("/login");

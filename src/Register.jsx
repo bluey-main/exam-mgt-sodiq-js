@@ -22,14 +22,17 @@ export default function Register() {
 
   
   const signup = () =>{
-    if (email !== "" && password !== "" && confirmPassword == password) {
+    if (email !== "" && password !== "" && confirmPassword == password && password.length >= 8) {
       auth.register(email, password, role)
   }
 
   if (confirmPassword != password) {
     toast.error("Passwords Don't Match")
   }
-  }
+
+  if(password.length < 8){
+    toast.error("Password must be at least 8 characters long")
+  }}
 
   const navigate = useNavigate();
   return (
