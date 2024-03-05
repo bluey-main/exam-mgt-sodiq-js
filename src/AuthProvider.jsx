@@ -25,6 +25,9 @@ export const AuthProvider = ({ children }) => {
         }
       );
       
+      if(response.status == 401){
+        toast.error("Invalid Credentials");
+      }
   
       if (response.data) {
         setUser(response.data.username);
@@ -36,13 +39,19 @@ export const AuthProvider = ({ children }) => {
 
       }
 
-      console.log( response.data);
+      // console.log( response.data);
+
       toast.success("Signed In Successfully");
 
 
     } catch (error) {
       console.log(error);
+      
+        toast.error(error.response.data.message)
+      
       toast.error('Failed To Sign In');
+      
+
 
     }
   };
@@ -72,13 +81,15 @@ export const AuthProvider = ({ children }) => {
         navigate("/");
       }
 
-      console.log(response.data, response.status);
+      // console.log(response.data, response.status);
       toast.success("Registered Successfully");
 
 
     } catch (error) {
       console.log(error);
       toast.error('Failed To Register');
+      toast.error(error.response.data.message)
+
     }
   };
 

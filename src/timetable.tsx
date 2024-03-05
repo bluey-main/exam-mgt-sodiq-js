@@ -129,14 +129,14 @@ const Timetable = () => {
         setPreciseTextileCourses(generatedTextileCourses);
         setPrecisePolymerCourses(generatedPolymerCourses);
 
-        console.log(generatedComputerTechCourses);
-        console.log(preciseFoodTechCourses);
-        console.log(preciseNutCourses);
-        console.log(preciseHospCourses);
-        console.log(preciseTextileCourses);
-        console.log(precisePolymerCourses);
+        // console.log(generatedComputerTechCourses);
+        // console.log(preciseFoodTechCourses);
+        // console.log(preciseNutCourses);
+        // console.log(preciseHospCourses);
+        // console.log(preciseTextileCourses);
+        // console.log(precisePolymerCourses);
 
-        console.log(timetable);
+        // console.log(timetable);
       } catch (error) {
         console.log(error);
       }
