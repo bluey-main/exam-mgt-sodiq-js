@@ -82,7 +82,8 @@ export default function Register() {
           </div>
           <div className="py-3">
             <Select label="Select Version">
-              <Option value="staff" onClick={() => setRole('staff')}>Staff</Option>
+              <Option value="staff" onClick={() => setRole('staff')}>Exam Officer</Option>
+              <Option value="staff" onClick={() => setRole('student')}>Invigilator</Option>
               <Option value="student"  onClick={() => setRole('student')}>Student</Option>
             </Select>
           </div>
